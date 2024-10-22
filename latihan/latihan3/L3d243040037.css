@@ -1,0 +1,47 @@
+body {
+    background-image: url(background.png);
+    background-size: 1900px 300px;
+    background-repeat: no-repeat;
+    font-family: 'Georgia';
+}
+h1 {
+    color: darkblue;
+    font-size: 60px;
+    text-align: center;
+    font-family: 'comic sans ms';
+}
+
+h3 {
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+    font-style: italic;
+}
+
+#p1 {
+    text-align: center;
+    color: coral;
+}
+
+#p2 {
+    text-align: right;
+}
+
+
+#a1 {
+    font-weight: bold;
+    color: red;
+    text-align: center;
+}
+
+
+#a2 {
+    text-decoration: none;
+}
+
+#a2:hover {
+    text-decoration: underline;
+}
+
