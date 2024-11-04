@@ -40,15 +40,28 @@ body {
     color: white;
 }
 
-.hero {
+.hero1 {
     height: 250px;
-
     background-image: url(img/heroB.jpg);
     background-size: cover;
     background-position: 0 0px;
     border-bottom: 5px solid #c6030e;
     border-top: 5px solid #ff8539;
 
+}
+
+.hero2 {
+    height: 250px;
+    background-image: url(img/image1.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+
+.hero3 {
+    height: 250px;
+    background-image: url(img/image2.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
 }
 
 .content {
