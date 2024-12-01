@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Sora", sans-serif;
+    overflow-x: hidden;
+    background-image: url(img/pattern.png);
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    background-color: #333333;
+    justify-content: space-around;
+    /* padding: 20px 0; */
+    color: #20CC00;
+    height: 50px;
+    align-items: center;
+}
+
+
+nav .logo {
+    background-image: url(img/rpl2.png);
+    font-family: "Sora", sans-serif;
+    letter-spacing: 3px;
+    font-weight: 800;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    width: 40%;
+    justify-content: space-between;
+}
+
+nav ul li a {
+    color: #20CC00;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+nav ul li a:hover {
+    color: #bbffaf;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+    display: none;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -5px;
+    top: -5px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #20CC00;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+/* Hamburger Menu Animation */
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle input:checked~span:nth-child(2) {
+    background-color: #20CC00;
+    transform: rotate(45deg) translate(-2px, -1px);
+}
+
+.menu-toggle input:checked~span:nth-child(4) {
+    background-color: #20CC00;
+    transform: rotate(-45deg) translate(-2px, 0);
+}
+
+.menu-toggle input:checked~span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+/* Responsive Breakpoint */
+
+/* ukuran tablet */
+@media screen and (max-width: 768px) {
+
+    nav ul {
+        width: 50%;
+    }
+}
+
+/* ukuran mobile */
+@media screen and (max-width: 576px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 60%;
+        height: 60vh;
+        border-bottom-left-radius: 10px;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color: #333333;
+        box-shadow: -5px 3px 10px rgba(0, 0, 0, 0.433);
+        z-index: -1;
+        transform: translateX(100%);
+        transition: all 1s ease-in-out;
+        opacity: 0;
+    }
+
+    nav ul.slide {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
